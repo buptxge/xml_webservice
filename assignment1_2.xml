@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE People [
+<!ELEMENT Person (Name,Address,Tel,Fax,Email)+>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Tel (#PCDATA)>
+<!ELEMENT Fax (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+]>
+<People>
+	<Person/>
+	<Person>
+		<Name>Zhangsan</Name>
+		<Address>Bupt</Address>
+		<Tel>8888</Tel>
+		<Fax>9999</Fax>
+		<Email>xxx@xxx.com</Email>
+	</Person>
+	<Person/>
+
+</People>

@@ -1,0 +1,17 @@
+<!DOCTYPE story [
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT byline (author,position,date)>
+<!ELEMENT author (firstname,lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT para (positon*,company*,quote*)+>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT quote (company+)>
+<!ELEMENT company (#PCDATA)>
+]>
+
+<!ATTLIST para lead (yes|no) "yes">
+
