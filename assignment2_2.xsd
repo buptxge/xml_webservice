@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="envelope_Type">
+	<xs:attribute name="From" type="xs:string" use="required"/>
+	<xs:sequence>
+		<xs:element name="From" type="xs:string"/>
+		<xs:element name="To" type="xs:string"/>
+		<xs:element name="Data" Type="xs:date"/>
+		<xs:element name="Subject" Type="xs:string"/>
+		<xs:element name="header" Type="xs:string" minOccur="0" maxOccur="unbounded"/>
+	</xs:sequence>
+	<xs:attribute name="From" type="xs:string" use="required">
+</xs:complexType>
+
+<xs:complexType name="attachment_type">
+	<xs:sequence>
+		<xs:element name="mimetype">
+			<xs:complexType>
+				<xs:attribute name="type" type="xs:string"/>
+				<xs:attribute name="subtype" type="xs:string"/>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="content" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="name" type="xs:string" use="required">
+</xs:complexType>
+
+<xs:element name="mails">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="mail" minOccurs="1" maxOccurs="unbounded">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="envelope" type="envelope_Type">
+					<xs:element name="body" type="xs:string" minOccur="0"/>
+					<xs:element name="attachment" type="attachment_Type"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:attribute name="id" use="required" type="xs:int"/>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
