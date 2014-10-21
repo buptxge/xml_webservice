@@ -1,0 +1,34 @@
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="BookStore">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Magazine" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="Date">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[1-2][0-9][0-9][0-9]"/>
+										</xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Book" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="Author" type="xs:string"/>
+							<xs:element name="Date" type="xs:string"/>
+							<xs:element name="ISBN" type="xs:string"/>
+							<xs:element name="Publisher" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
