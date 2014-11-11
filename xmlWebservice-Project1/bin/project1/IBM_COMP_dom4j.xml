@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<purchaseOrders>
+    <IBM_COMP>
+        <purchaseOrder/>
+        <purchaseOrder>
+            <shipTo>
+                <export-code>3</export-code>
+                <type>US-Address</type>
+                <name>Google</name>
+                <street>47 Eden Street</street>
+                <city>Pal alto</city>
+                <postcode>95126</postcode>
+            </shipTo>
+            <item>
+                <partNum>1289-UL</partNum>
+                <productName>Jade earring</productName>
+                <quantity>5</quantity>
+                <price>179.90</price>
+                <shipDate>2000-02-14</shipDate>
+            </item>
+        </purchaseOrder>
+        <purchaseOrder/>
+    </IBM_COMP>
+</purchaseOrders>
